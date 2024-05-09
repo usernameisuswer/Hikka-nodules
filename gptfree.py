@@ -33,7 +33,7 @@ class G4FModule(loader.Module):
     async def imgcmd(self, message: Message):
         """Генерирует изображение с помощью bingart"""
         prompt = message.raw_text.split(maxsplit=1)[1] if len(message.raw_text.split(maxsplit=1)) > 1 else "изображение"
-        await utils.answer(message, "генерация изображения...")
+        await utils.answer(message, "<emoji document_id=5307675706283533118>🫥</emoji> <b>Генерирую...</b>")
         image_response = await self.generate_image(prompt)
         if image_response.startswith('http'):
             await message.client.send_file(message.chat_id, image_response, caption=f"prompt: {prompt}")
