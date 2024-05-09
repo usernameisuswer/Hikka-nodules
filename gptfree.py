@@ -11,7 +11,7 @@ logging.basicConfig(level=logging.INFO)
 
 @loader.tds
 class G4FModule(loader.Module):
-    """Модуль для работы с бесплатным gpt 4 и BingImagesCreate"""
+    """Модуль для работы с библиотекой bingart"""
     strings = {
         "name": "G4FModule",
         "cfg_doc_U": "Настройка cookie '_U' для bingart."
@@ -36,7 +36,7 @@ class G4FModule(loader.Module):
         await utils.answer(message, "<emoji document_id=5307675706283533118>🫥</emoji> <b>Генерирую...</b>")
         image_response = await self.generate_image(prompt)
         if image_response.startswith('http'):
-            await message.client.send_file(message.chat_id, image_response, caption=f"prompt: {prompt}")
+            await message.client.send_file(message.chat_id, f'{image_response}.jpg', caption=f"prompt: {prompt}")
         else:
             await utils.answer(message, image_response)
 
