@@ -4,7 +4,7 @@ import logging
 from bingart import BingArt 
 from g4f.client import Client 
 
-# requires: g4f
+# requires: g4f bingart
 # meta developer:@DieModules (@ytkanelox)
 
 logging.basicConfig(level=logging.INFO)
