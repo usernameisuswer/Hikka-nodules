@@ -11,7 +11,7 @@ logging.basicConfig(level=logging.INFO)
 
 @loader.tds
 class G4FModule(loader.Module):
-    """Модуль для работы с библиотекой bingart"""
+    """Модуль для работы с бесплатным gpt 4 и BingImagesCreate"""
     strings = {
         "name": "G4FModule",
         "cfg_doc_U": "Настройка cookie '_U' для bingart."
