@@ -9,7 +9,7 @@ from bingart import BingArt
 logging.basicConfig(level=logging.INFO)
 
 @loader.tds
-class BingCreateImage(loader.Module):
+class BingImgCreate(loader.Module):
     """Модуль для работы с библиотекой bingart"""
     strings = {
         "name": "BingCreateImage",
