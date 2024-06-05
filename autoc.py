@@ -1,3 +1,5 @@
+#meta developer: @codrago_m, @ytkanelox
+
 from telethon import events
 from .. import loader, utils
 import asyncio
